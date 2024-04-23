@@ -1,2 +1,2 @@
 
-# A modeling solution for university course on TS
+# A modeling solution for university course on TS.
