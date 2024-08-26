@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "lint": "tslint -c tslint.json src/**/*.ts",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
@@ -21,5 +22,16 @@
     "./bin/*",
     "./lib/*"
   ],
-  "typings": "./lib/index.d.ts"
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "node ./branchNameLint.js && npm run check-build"
+    }
+  },
+  "typings": "./lib/index.d.ts",
+  "devDependencies": {
+    "@commitlint/cli": "^19.4.0",
+    "@web-bee-ru/commitlint-config": "^2.0.1",
+    "husky": "^8.0.0"
+  }
 }
