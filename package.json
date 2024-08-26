@@ -25,7 +25,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "node ./branchNameLint.js && npm run check-build"
+      "pre-push": "node ./commitlint.config.js"
     }
   },
   "typings": "./lib/index.d.ts",
