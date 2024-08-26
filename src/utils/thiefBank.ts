@@ -1,4 +1,3 @@
-
 let currentBuildingStatus: Array<number> = []
 
 
@@ -24,9 +23,9 @@ const green = '\x1b[32m'
 function Play(lSpeed:number, fSpeed:number, cSpeed:number, fSFloor:number) {
 
   const liftSpeed: number = lSpeed
-  const fireSpeed: number = fSpeed 
+  const fireSpeed: number = fSpeed
   const collectionSpeed: number = cSpeed
-  const fireStartFloor: number = fSFloor 
+  const fireStartFloor: number = fSFloor
   //const buildingHeight:number = Number(args.buildingHeight)
 
   const moneyFloors: number = getRandomInt(1, fireStartFloor)
